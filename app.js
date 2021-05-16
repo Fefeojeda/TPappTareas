@@ -17,6 +17,9 @@ switch (inputTexto) {
     case 'agregar' :
         let titulo = process.argv[3];
         let estado = process.argv[4];
+        if (estado === undefined){
+            estado = "Pendiente"
+        }
         modTareas.agregarTarea(titulo,estado)
         break;
     case 'deshacer' :
